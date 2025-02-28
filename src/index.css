@@ -1,1 +1,73 @@
 @import 'tailwindcss';
+
+:root {
+  --font-family-albert: 'Albert Sans', sans-serif;
+  --font-family-nunito: 'Nunito Sans', sans-serif;
+  --background: #1f002b;
+  --main-color: #fff;
+  --secondary-color: #c4c8cc;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #dedede;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #36173d;
+  border-radius: 10px;
+  border: 0px solid pink;
+}
+
+* a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--background);
+  font-size: 17px;
+  color: var(--main-color);
+  height: 100vh;
+}
+
+a {
+  display: inline-flex;
+}
+
+#root {
+  height: 100%;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  color: var(--secondary-color);
+}
+
+@layer base {
+  * {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer utilities {
+  .container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 20px;
+  }
+}
