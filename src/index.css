@@ -1,3 +1,4 @@
+@import './assets/fonts/fonts.css';
 @import 'tailwindcss';
 
 :root {
@@ -32,7 +33,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-family-albert), sans-serif;
   background: var(--background);
   font-size: 17px;
   color: var(--main-color);
