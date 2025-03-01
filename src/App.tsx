@@ -2,6 +2,8 @@ import { FC, lazy, Suspense } from 'react';
 
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
+import FinalPage from './pages/FinalPage/FinalPage';
+import ProgressPage from './pages/ProgressPage/ProgressPage';
 import QuizPage from './pages/QuizPage/QuizPage';
 
 const EmailPage = lazy(() => import('./pages/EmailPage/EmailPage'));
@@ -26,9 +28,18 @@ const AppContainer: FC = () => {
               element={<QuizPage />}
             />
             <Route
+              path='progress'
+              element={<ProgressPage />}
+            />
+            <Route
               path='email'
               element={<EmailPage />}
             />
+            <Route
+              path='final'
+              element={<FinalPage />}
+            />
+
             <Route
               path='*'
               element={
