@@ -1,4 +1,15 @@
-export type QuizAnswer = { quizId: number; options: string | string[] };
+export type QuizAnswer = {
+  quizId: number;
+  title: string;
+  type: QuizType;
+  answer: Answer[];
+};
+
+export type Answer = {
+  id: string;
+  options: string;
+};
+
 export type QuizData = {
   quizId: number;
   type: QuizType;
@@ -15,6 +26,12 @@ export type QuizOption = {
   id: string;
   label: string;
   image: string;
+};
+
+export type DownloadFile = {
+  data: string;
+  fileName: string;
+  fileType: string;
 };
 
 export enum Translations {
