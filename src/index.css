@@ -3,7 +3,7 @@
 
 :root {
   --font-family-albert: 'Albert Sans', sans-serif;
-  --font-family-nunito: 'Nunito Sans', sans-serif;
+  --font-family-niconne: 'Niconne', sans-serif;
   --background: #1f002b;
   --main-color: #fff;
   --secondary-color: #c4c8cc;
@@ -32,20 +32,28 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+*:focus-visible {
+  outline: none;
+}
+
 body {
   font-family: var(--font-family-albert), sans-serif;
   background: var(--background);
   font-size: 17px;
   color: var(--main-color);
-  height: 100vh;
-}
-
-a {
-  display: inline-flex;
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
 }
 
 #root {
   height: 100%;
+}
+
+a {
+  display: inline-flex;
 }
 
 h2 {
@@ -55,6 +63,12 @@ h2 {
 
 h3 {
   color: var(--secondary-color);
+}
+
+h4 {
+  font-family: var(--font-family-niconne);
+  font-size: 36px;
+  color: #ececfb;
 }
 
 @layer base {

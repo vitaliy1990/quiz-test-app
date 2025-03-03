@@ -39,3 +39,10 @@
   font-weight: 800;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Niconne';
+  src: url('./niconne/Niconne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
