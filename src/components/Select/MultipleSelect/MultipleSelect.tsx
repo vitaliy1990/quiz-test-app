@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
 
+import { useTranslation } from 'react-i18next';
+
 import { Answer, QuizOption } from '../../../types';
 import { createQuizAnswers } from '../../../utils/quiz';
 import Answers from '../../Answers/Answers';
@@ -25,6 +27,7 @@ const MultipleSelect: FC<Props> = ({
   buttonClassName = '',
 }) => {
   const [answers, setAnswers] = useState<Answer[]>(storageAnswers);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setAnswers(storageAnswers);
@@ -68,7 +71,7 @@ const MultipleSelect: FC<Props> = ({
         className='w-full max-w-[400px] rounded-3xl p-2.5 font-extrabold hover:bg-[#e4229c]'
         disabled={!answers.length}
       >
-        Next
+        {t('button')}
       </Button>
     </div>
   );

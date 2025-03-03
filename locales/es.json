@@ -1,0 +1,13 @@
+{
+  "title": "Correo electrónico",
+  "description": "Ingresa tu correo electrónico para obtener acceso completo",
+  "agreement": "Al continuar, acepto la <privacyLink>política de privacidad</privacyLink> y los <termsLink>términos de uso</termsLink>.",
+  "placeholder": "Tu correo electrónico",
+  "error": "¡Por favor ingresa una dirección de correo electrónico válida!",
+  "button": "Siguiente",
+  "progressCompiling": "Buscando colecciones para ti...",
+  "thankYou": "Gracias",
+  "supporting": "por apoyarnos y completar el cuestionario",
+  "download": "Descargar mis respuestas",
+  "retake": "Volver a hacer el cuestionario"
+}

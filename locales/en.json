@@ -1,0 +1,13 @@
+{
+  "title": "Email",
+  "description": "Enter your email to get full access",
+  "agreement": "By continuing I agree with <privacyLink>Privacy policy</privacyLink> and <termsLink>Terms of use</termsLink>.",
+  "placeholder": "Your email",
+  "error": "Please enter a valid email address!",
+  "button": "Next",
+  "progressCompiling": "Finding collections for you...",
+  "thankYou": "Thank you",
+  "supporting": "for supporting us and passing quiz",
+  "download": " Download my answers",
+  "retake": "Retake quiz"
+}

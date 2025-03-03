@@ -1,0 +1,13 @@
+{
+  "title": "E-Mail",
+  "description": "Geben Sie Ihre E-Mail-Adresse ein, um vollen Zugang zu erhalten",
+  "agreement": "Indem Sie fortfahren, stimmen Sie der <privacyLink>Datenschutzrichtlinie</privacyLink> und den <termsLink>Nutzungsbedingungen</termsLink> zu.",
+  "placeholder": "Ihre E-Mail-Adresse",
+  "error": "Bitte geben Sie eine gültige E-Mail-Adresse ein!",
+  "button": "Weiter",
+  "progressCompiling": "Sammlungen werden für Sie gesucht...",
+  "thankYou": "Danke",
+  "supporting": "für Ihre Unterstützung und das Bestehen des Quiz",
+  "download": "Meine Antworten herunterladen",
+  "retake": "Quiz erneut machen"
+}

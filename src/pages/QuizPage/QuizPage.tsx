@@ -19,6 +19,7 @@ const QuizPage: FC = () => {
   const { data, quizCount } = dataJSON;
 
   const { language, setLanguage } = useLanguage();
+
   const storageQuizAnswers = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS, []);
 
   const quizData = useMemo(
