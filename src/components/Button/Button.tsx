@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, MouseEvent } from 'react';
 
 import { ButtonSize, ButtonType, ButtonVariant } from '../../types';
 import { cn } from '../../utils/style';
 
 type Props = {
   children: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   className?: string;
   type?: ButtonType;
   disabled?: boolean;
@@ -27,8 +27,7 @@ const Button: FC<Props> = ({
     primary: 'bg-[#e4229c] text-white hover:bg-[#e4229c]/70',
     secondary: 'bg-gray-500 text-white hover:bg-gray-600',
     danger: 'bg-red-500 text-white hover:bg-red-600',
-    ghost:
-      'bg-[#36173d] hover:bg-[rgba(228,34,155,0.2)] border-2 border-transparent hover:border-[#e4229b] rounded-2xl',
+    ghost: 'bg-[#36173d] border-2 border-transparent rounded-2xl',
     transparent: 'bg-transparenr',
   };
 
@@ -44,7 +43,7 @@ const Button: FC<Props> = ({
       type={type}
       onClick={onClick}
       className={cn(
-        'cursor-pointer rounded transition-colors duration-500 focus:outline-none disabled:cursor-auto disabled:opacity-40',
+        'relative cursor-pointer rounded transition duration-300 focus:outline-none disabled:cursor-auto disabled:opacity-40',
         variantClasses[variant],
         sizeClasses[size],
         className

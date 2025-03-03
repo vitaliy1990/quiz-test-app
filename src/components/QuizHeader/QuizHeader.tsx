@@ -36,7 +36,7 @@ const QuizHeader: FC<Props> = ({ quizId }) => {
           <span className='font-medium'>/</span>
           <span>5</span>
         </div>
-        <DotsMenu />
+        <DotsMenu onClick={() => {}} />
       </div>
       <LinerProgressBar progress={progress} />
     </div>

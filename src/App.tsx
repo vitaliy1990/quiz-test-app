@@ -5,6 +5,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import FinalPage from './pages/FinalPage/FinalPage';
 import ProgressPage from './pages/ProgressPage/ProgressPage';
 import QuizPage from './pages/QuizPage/QuizPage';
+import { QuizProtectedRoute } from './routes';
 
 const EmailPage = lazy(() => import('./pages/EmailPage/EmailPage'));
 
@@ -24,9 +25,15 @@ const AppContainer: FC = () => {
               }
             />
             <Route
-              path='quiz/:id'
-              element={<QuizPage />}
-            />
+              path='/quiz'
+              element={<QuizProtectedRoute />}
+            >
+              <Route
+                path=':id'
+                element={<QuizPage />}
+              />
+            </Route>
+
             <Route
               path='progress'
               element={<ProgressPage />}

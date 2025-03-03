@@ -1,9 +1,9 @@
 import { useCallback } from 'react';
 
-const useLocalStorage = <T>(key: string, initialValue: T) => {
+const useLocalStorage = <T>(key: string, initialValue?: T) => {
   const get = useCallback((): T => {
     const storedValue = localStorage.getItem(key);
-    return storedValue ? JSON.parse(storedValue) : initialValue;
+    return storedValue ? JSON.parse(storedValue) : initialValue || '';
   }, [key, initialValue]);
 
   const set = useCallback(
