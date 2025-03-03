@@ -49,7 +49,8 @@ const QuizQuestions: FC<Props> = ({
             options={options}
             storageAnswers={storageAnswers}
             maxSelectCount={3}
-            buttonClassName='rounded-full size-[88px] [&>span:first-child]:text-2xl [&>span:last-child]:flex-none [&>span:last-child]:text-sm p-2 justify-center items-center overflow-hidden flex-none not-odd:translate-y-[110%] odd:translate-x-[100%]'
+            buttonClassName='rounded-full size-[88px] [&>span:first-child]:text-2xl [&>span:last-child]:flex-none [&>span:last-child]:text-sm [&>span]:leading-3.5 p-2 justify-center items-center overflow-hidden flex-none gap-2.5 not-odd:translate-y-1/4'
+            answerClassName='[&>div]:grid [&>div]:grid-cols-4 max-w-[400px] [&>div]:py-9 [&>div]:mx-auto [&>div]:place-items-center [&>div]:gap-2 [&>div]:min-w-[370px]'
             showImage
           />
         );
@@ -65,7 +66,7 @@ const QuizQuestions: FC<Props> = ({
         className='text-center'
         dangerouslySetInnerHTML={{ __html: title }}
       />
-      <h3 className='size- text-center'>{description}</h3>
+      <h3 className='text-center'>{description}</h3>
       {renderQuiz()}
     </div>
   );

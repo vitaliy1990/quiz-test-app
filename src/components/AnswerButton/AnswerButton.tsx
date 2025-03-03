@@ -2,7 +2,7 @@ import React, { FC, useCallback, useMemo } from 'react';
 
 import { cn } from '../../utils/style';
 import Button from '../Button/Button';
-import CheckIcon from '../icons/CheckIcon/CheckIcon';
+import { CheckIcon } from '../icons';
 
 type Props = {
   handleSubmit: (label: string, id: string) => void;

@@ -4,11 +4,11 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import QuizHeader from '../../components/QuizHeader/QuizHeader';
 import QuizQuestions from '../../components/QuizQuestions/QuizQuestions';
-import { QUIZ_ANSWERS } from '../../const';
+import { QUIZ_ANSWERS, QUIZ_STEPS } from '../../const';
 import dataJSON from '../../data/quizzes.json';
 import { useLanguage } from '../../hooks/useLanguage';
 import useLocalStorage from '../../hooks/useLocalStorage';
-import { Answer, QuizAnswer, QuizData, QuizType } from '../../types';
+import { Answer, QuizAnswer, QuizData, QuizSteps, QuizType } from '../../types';
 import { updateQuizAnswers } from '../../utils/quiz';
 
 const QuizPage: FC = () => {
@@ -21,10 +21,11 @@ const QuizPage: FC = () => {
   const { language, setLanguage } = useLanguage();
 
   const storageQuizAnswers = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS, []);
+  const stepsStorage = useLocalStorage<QuizSteps>(QUIZ_STEPS, 'quiz');
 
   const quizData = useMemo(
     () => data.find((item) => item.quizId === quizId) as QuizData | undefined,
-    [quizId]
+    [quizId, data]
   );
 
   const storageAnswers = useMemo(
@@ -52,6 +53,7 @@ const QuizPage: FC = () => {
       updateQuizAnswers(quizAnswer, storageQuizAnswers);
 
       if (quizId === quizCount) {
+        stepsStorage.set('progress');
         return navigate('/progress');
       }
 

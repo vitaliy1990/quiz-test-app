@@ -18,7 +18,7 @@ export const useLanguage = () => {
         i18n.changeLanguage(lang);
       }
     },
-    [i18n]
+    [i18n, set]
   );
 
   const language = get();

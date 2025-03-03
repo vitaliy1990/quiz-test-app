@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Answer, QuizOption } from '../../../types';
 import { createQuizAnswers } from '../../../utils/quiz';
+import { cn } from '../../../utils/style';
 import Answers from '../../Answers/Answers';
 import Button from '../../Button/Button';
 
@@ -15,6 +16,8 @@ type Props = {
   maxSelectCount?: number;
   showCheckbox?: boolean;
   buttonClassName?: string;
+  rootClassName?: string;
+  answerClassName?: string;
 };
 
 const MultipleSelect: FC<Props> = ({
@@ -25,6 +28,8 @@ const MultipleSelect: FC<Props> = ({
   maxSelectCount,
   showCheckbox,
   buttonClassName = '',
+  rootClassName = '',
+  answerClassName = '',
 }) => {
   const [answers, setAnswers] = useState<Answer[]>(storageAnswers);
   const { t } = useTranslation();
@@ -56,15 +61,23 @@ const MultipleSelect: FC<Props> = ({
   };
 
   return (
-    <div className='flex h-full w-full flex-col items-center justify-between gap-6'>
-      <Answers
-        handleClick={handleClick}
-        options={options}
-        answers={answers}
-        showCheckbox={showCheckbox}
-        showImage={showImage}
-        buttonClassName={buttonClassName}
-      />
+    <div
+      className={cn(
+        'flex h-full w-full flex-col items-center justify-between gap-6',
+        rootClassName
+      )}
+    >
+      <div className={cn('w-full overflow-x-auto', answerClassName)}>
+        <Answers
+          handleClick={handleClick}
+          options={options}
+          answers={answers}
+          showCheckbox={showCheckbox}
+          showImage={showImage}
+          buttonClassName={buttonClassName}
+        />
+      </div>
+
       <Button
         variant='primary'
         onClick={onSubmit}

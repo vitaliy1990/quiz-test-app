@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Button from '../Button/Button';
 import DotsMenu from '../DotsMenu/DotsMenu';
-import ArrowIcon from '../icons/ArrowIcon/ArrowIcon';
+import { ArrowIcon } from '../icons';
 import LinerProgressBar from '../ProgressBar/LinerProgressBar/LinerProgressBar';
 
 type Props = {

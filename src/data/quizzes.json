@@ -258,7 +258,7 @@
       "translations": {
         "en": {
           "title": "What are your favorite topics?",
-          "description": "",
+          "description": "Choose up to 3 topics you like",
           "options": [
             {
               "id": "werewolf",
@@ -299,7 +299,7 @@
         },
         "fr": {
           "title": "Quels sont vos sujets préférés ?",
-          "description": "",
+          "description": "Choisissez jusqu'à 3 sujets que vous aimez",
           "options": [
             {
               "id": "werewolf",
@@ -340,7 +340,7 @@
         },
         "de": {
           "title": "Was sind Ihre Lieblingsthemen?",
-          "description": "",
+          "description": "Wähle bis zu 3 Themen, die dir gefallen",
           "options": [
             {
               "id": "werewolf",
@@ -381,7 +381,7 @@
         },
         "es": {
           "title": "¿Cuáles son tus temas favoritos?",
-          "description": "",
+          "description": "Elige hasta 3 temas que te gusten",
           "options": [
             {
               "id": "werewolf",

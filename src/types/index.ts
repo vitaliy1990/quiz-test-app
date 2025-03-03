@@ -50,6 +50,7 @@ export enum QuizType {
 
 export type ButtonType = 'button' | 'submit' | 'reset';
 export type ButtonSize = 'small' | 'medium' | 'large' | 'default';
+export type QuizSteps = 'quiz' | 'progress' | 'email' | 'final';
 
 export type ButtonVariant =
   | 'primary'
