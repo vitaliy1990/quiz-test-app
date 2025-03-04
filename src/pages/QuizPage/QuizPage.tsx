@@ -8,25 +8,34 @@ import { QUIZ_ANSWERS, QUIZ_STEPS } from '../../const';
 import dataJSON from '../../data/quizzes.json';
 import { useLanguage } from '../../hooks/useLanguage';
 import useLocalStorage from '../../hooks/useLocalStorage';
-import { Answer, QuizAnswer, QuizData, QuizSteps, QuizType } from '../../types';
-import { updateQuizAnswers } from '../../utils/quiz';
+import {
+  Answer,
+  QuizAnswer,
+  QuizData,
+  QuizSteps,
+  Translations,
+} from '../../types';
+import { createQuizAnswerData, updateQuizAnswers } from '../../utils/quiz';
 
 const QuizPage: FC = () => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
-
   const quizId = Number(id) || 1;
-  const { data, quizCount } = dataJSON;
+
+  const navigate = useNavigate();
 
   const { language, setLanguage } = useLanguage();
 
   const storageQuizAnswers = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS, []);
   const stepsStorage = useLocalStorage<QuizSteps>(QUIZ_STEPS, 'quiz');
 
+  const { data, quizCount } = dataJSON;
+
   const quizData = useMemo(
-    () => data.find((item) => item.quizId === quizId) as QuizData | undefined,
+    () => data.find((item) => item.quizId === quizId) || data[0],
     [quizId, data]
   );
+
+  const { translations, type } = quizData as QuizData;
 
   const storageAnswers = useMemo(
     () =>
@@ -37,19 +46,11 @@ const QuizPage: FC = () => {
   const handleSubmit = useCallback(
     (answer: Answer[]) => {
       if (quizId === 1) {
-        setLanguage(answer[0].id);
+        const lng = answer[0].id as Translations;
+        setLanguage(lng);
       }
 
-      const title = quizData?.translations[language].title || '';
-      const type = (quizData?.type || '') as QuizType;
-
-      const quizAnswer: QuizAnswer = {
-        quizId,
-        title,
-        type,
-        answer,
-      };
-
+      const quizAnswer = createQuizAnswerData(quizData as QuizData, answer);
       updateQuizAnswers(quizAnswer, storageQuizAnswers);
 
       if (quizId === quizCount) {
@@ -68,8 +69,8 @@ const QuizPage: FC = () => {
     <div className='flex h-full flex-col gap-8'>
       <QuizHeader quizId={quizId} />
       <QuizQuestions
-        type={quizData.type}
-        quizData={quizData.translations[language]}
+        type={type}
+        quizData={translations[language]}
         handleSubmit={handleSubmit}
         storageAnswers={storageAnswers || []}
       />

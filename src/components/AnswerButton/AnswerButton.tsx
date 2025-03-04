@@ -14,7 +14,6 @@ type Props = {
   isActive?: boolean;
   buttonClassName?: string;
   labelClassName?: string;
-  multiple?: boolean;
 };
 
 const AnswerButton: FC<Props> = ({

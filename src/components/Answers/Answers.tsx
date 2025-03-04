@@ -11,7 +11,6 @@ type Props = {
   showImage?: boolean;
   showCheckbox?: boolean;
   buttonClassName?: string;
-  multiple?: boolean;
 };
 
 const Answers: FC<Props> = ({
@@ -20,7 +19,6 @@ const Answers: FC<Props> = ({
   handleClick,
   showImage = false,
   showCheckbox = false,
-  multiple = false,
   buttonClassName = '',
 }) => {
   const renderAnswers = () =>
@@ -35,7 +33,6 @@ const Answers: FC<Props> = ({
           isActive={!!isActive}
           buttonClassName={buttonClassName}
           showCheckbox={showCheckbox}
-          multiple={multiple}
           {...option}
         />
       );
