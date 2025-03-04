@@ -48,9 +48,15 @@ export enum QuizType {
   BUBBLE = 'bubble',
 }
 
+export enum QuizSteps {
+  QUIZ = 'quiz',
+  PROGRESS = 'progress',
+  EMAIL = 'email',
+  FINAL = 'final',
+}
+
 export type ButtonType = 'button' | 'submit' | 'reset';
 export type ButtonSize = 'small' | 'medium' | 'large' | 'default';
-export type QuizSteps = 'quiz' | 'progress' | 'email' | 'final';
 
 export type ButtonVariant =
   | 'primary'

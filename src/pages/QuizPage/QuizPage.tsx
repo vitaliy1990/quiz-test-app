@@ -26,7 +26,7 @@ const QuizPage: FC = () => {
   const { language, setLanguage } = useLanguage();
 
   const storageQuizAnswers = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS, []);
-  const stepsStorage = useLocalStorage<QuizSteps>(QUIZ_STEPS, 'quiz');
+  const stepsStorage = useLocalStorage<QuizSteps>(QUIZ_STEPS, QuizSteps.QUIZ);
 
   const { data, quizCount } = dataJSON;
 
@@ -54,7 +54,7 @@ const QuizPage: FC = () => {
       updateQuizAnswers(quizAnswer, storageQuizAnswers);
 
       if (quizId === quizCount) {
-        stepsStorage.set('progress');
+        stepsStorage.set(QuizSteps.PROGRESS);
         return navigate('/progress');
       }
 

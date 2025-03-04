@@ -13,7 +13,7 @@ const EmailPage = () => {
   const { t } = useTranslation();
 
   const storageQuizAnswers = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS);
-  const stepsStorage = useLocalStorage<QuizSteps>(QUIZ_STEPS, 'quiz');
+  const stepsStorage = useLocalStorage<QuizSteps>(QUIZ_STEPS, QuizSteps.QUIZ);
 
   const handleSubmit = (value: string) => {
     const quizAnswer = {
@@ -24,7 +24,7 @@ const EmailPage = () => {
     };
     updateQuizAnswers(quizAnswer, storageQuizAnswers);
 
-    stepsStorage.set('final');
+    stepsStorage.set(QuizSteps.FINAL);
     navigate('/final');
   };
 

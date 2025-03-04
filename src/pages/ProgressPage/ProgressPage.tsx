@@ -16,7 +16,7 @@ const ProgressPage = () => {
 
   const intervalRef = useRef<null | number>(null);
 
-  const stepsStorage = useLocalStorage<QuizSteps>(QUIZ_STEPS, 'quiz');
+  const stepsStorage = useLocalStorage<QuizSteps>(QUIZ_STEPS, QuizSteps.QUIZ);
 
   const { t } = useTranslation();
 
@@ -27,7 +27,7 @@ const ProgressPage = () => {
       }
 
       requestAnimationFrame(() => {
-        stepsStorage.set('email');
+        stepsStorage.set(QuizSteps.EMAIL);
         navigate('/email');
       });
 
