@@ -48,6 +48,7 @@ const Button: FC<Props> = ({
         sizeClasses[size],
         className
       )}
+      aria-label='button'
       disabled={disabled}
     >
       {children}

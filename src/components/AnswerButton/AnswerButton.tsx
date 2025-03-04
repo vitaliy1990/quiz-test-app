@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useMemo } from 'react';
+import { FC, useCallback, useMemo } from 'react';
 
 import { cn } from '../../utils/style';
 import Button from '../Button/Button';

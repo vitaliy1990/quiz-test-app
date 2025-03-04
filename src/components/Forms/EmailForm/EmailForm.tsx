@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, FormEvent, useState } from 'react';
+import { ChangeEvent, FC, FormEvent, useState } from 'react';
 
 import { Trans, useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';

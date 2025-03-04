@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { Answer, QuizOption } from '../../../types';
 import { createQuizAnswers } from '../../../utils/quiz';

@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent } from 'react';
+import { FC, MouseEvent } from 'react';
 
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';

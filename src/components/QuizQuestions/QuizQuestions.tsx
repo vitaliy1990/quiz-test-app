@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import { FC, useCallback } from 'react';
 
 import { Answer, QuizType, TranslationData } from '../../types';
 import MultipleSelect from '../Select/MultipleSelect/MultipleSelect';

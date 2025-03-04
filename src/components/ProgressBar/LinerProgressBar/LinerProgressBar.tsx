@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react';
+import { FC, memo } from 'react';
 
 import { cn } from '../../../utils/style';
 
@@ -17,6 +17,7 @@ const LinerProgressBar: FC<Props> = memo(
           progressBarClassName
         )}
         role='progressbar'
+        aria-label='progressbar'
       >
         <div
           className={cn(
