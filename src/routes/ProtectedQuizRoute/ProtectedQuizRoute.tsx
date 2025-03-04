@@ -12,7 +12,7 @@ const ProtectedQuizRoute = () => {
 
   const quizId = Number(id);
 
-  const steps = useLocalStorage<QuizSteps>(QUIZ_STEPS, 'quiz').get();
+  const steps = useLocalStorage<QuizSteps>(QUIZ_STEPS, QuizSteps.QUIZ).get();
   const answeredQuiz = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS, []).get();
 
   if (steps === 'final') {
