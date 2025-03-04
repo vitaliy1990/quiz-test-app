@@ -2,7 +2,7 @@ import { FC, lazy, Suspense } from 'react';
 
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
-import FinalPage from './pages/FinalPage/FinalPage';
+import Loader from './components/Loader/Loader';
 import ProgressPage from './pages/ProgressPage/ProgressPage';
 import QuizPage from './pages/QuizPage/QuizPage';
 import {
@@ -12,13 +12,14 @@ import {
   ProtectedQuizRoute,
 } from './routes';
 
+const FinalPage = lazy(() => import('./pages/FinalPage/FinalPage'));
 const EmailPage = lazy(() => import('./pages/EmailPage/EmailPage'));
 
 const AppContainer: FC = () => {
   return (
     <div className='flex h-full flex-col'>
       <main className='container flex-1'>
-        <Suspense fallback={<div>LOADER</div>}>
+        <Suspense fallback={<Loader size='large' />}>
           <Routes>
             <Route
               path='/'

@@ -11,11 +11,8 @@ const ProtectedQuizRoute = () => {
   const quizId = Number(id);
   const { quizCount } = dataJSON;
 
-  const stepsStorage = useLocalStorage<QuizSteps>(QUIZ_STEPS, 'quiz');
-  const answersStorage = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS, []);
-
-  const answeredQuiz = answersStorage.get();
-  const steps = stepsStorage.get();
+  const steps = useLocalStorage<QuizSteps>(QUIZ_STEPS, 'quiz').get();
+  const answeredQuiz = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS, []).get();
 
   if (steps === 'final') {
     return (
