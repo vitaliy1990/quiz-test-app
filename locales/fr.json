@@ -1,0 +1,13 @@
+{
+  "title": "E-mail",
+  "description": "Entrez votre e-mail pour accéder à tout le contenu",
+  "agreement": "En continuant, j'accepte la <privacyLink>politique de confidentialité</privacyLink> et les <termsLink>conditions d'utilisation</termsLink>.",
+  "placeholder": "Votre e-mail",
+  "error": "Veuillez entrer une adresse e-mail valide !",
+  "button": "Suivant",
+  "progressCompiling": "Recherche de collections pour vous...",
+  "thankYou": "Merci",
+  "supporting": "pour votre soutien et pour avoir réussi le quiz",
+  "download": "Télécharger mes réponses",
+  "retake": "Repasser le quiz"
+}

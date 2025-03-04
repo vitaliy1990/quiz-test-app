@@ -1,0 +1,427 @@
+{
+  "data": [
+    {
+      "quizId": 1,
+      "type": "single-select",
+      "translations": {
+        "en": {
+          "title": "What is your preferred language?",
+          "description": "Choose a language",
+          "options": [
+            { "id": "en", "label": "English", "image": "" },
+            { "id": "fr", "label": "French", "image": "" },
+            { "id": "de", "label": "German", "image": "" },
+            { "id": "es", "label": "Spanish", "image": "" }
+          ]
+        },
+        "fr": {
+          "title": "Quelle est votre langue préférée ?",
+          "description": "Choisissez une langue",
+          "options": [
+            { "id": "en", "label": "Anglais", "image": "" },
+            { "id": "fr", "label": "Français", "image": "" },
+            { "id": "de", "label": "Allemand", "image": "" },
+            { "id": "es", "label": "Espagnol", "image": "" }
+          ]
+        },
+        "de": {
+          "title": "Welche Sprache bevorzugen Sie?",
+          "description": "Wählen Sie eine Sprache",
+          "options": [
+            { "id": "en", "label": "Englisch", "image": "" },
+            { "id": "fr", "label": "Französisch", "image": "" },
+            { "id": "de", "label": "Deutsch", "image": "" },
+            { "id": "es", "label": "Spanisch", "image": "" }
+          ]
+        },
+        "es": {
+          "title": "¿Cuál es tu idioma preferido?",
+          "description": "Elige un idioma",
+          "options": [
+            { "id": "en", "label": "Inglés", "image": "" },
+            { "id": "fr", "label": "Francés", "image": "" },
+            { "id": "de", "label": "Alemán", "image": "" },
+            { "id": "es", "label": "Español", "image": "" }
+          ]
+        }
+      }
+    },
+    {
+      "quizId": 2,
+      "type": "single-select-image",
+      "translations": {
+        "en": {
+          "title": "What gender do you identify with?",
+          "description": "Please share how you identify yourself",
+          "options": [
+            { "id": "female", "label": "Female", "image": "👩" },
+            { "id": "male", "label": "Male", "image": "👨" },
+            { "id": "other", "label": "Other", "image": "😉" }
+          ]
+        },
+        "fr": {
+          "title": "Avec quel genre vous identifiez-vous ?",
+          "description": "Veuillez indiquer comment vous vous identifiez",
+          "options": [
+            { "id": "female", "label": "Femme", "image": "👩" },
+            { "id": "male", "label": "Homme", "image": "👨" },
+            { "id": "other", "label": "Autre", "image": "😉" }
+          ]
+        },
+        "de": {
+          "title": "Mit welchem Geschlecht identifizieren Sie sich?",
+          "description": "Bitte teilen Sie uns mit, wie Sie sich identifizieren",
+          "options": [
+            {
+              "id": "female",
+              "label": "Weiblich",
+              "image": "👩"
+            },
+            { "id": "male", "label": "Männlich", "image": "👨" },
+            { "id": "other", "label": "Andere", "image": "😉" }
+          ]
+        },
+        "es": {
+          "title": "¿Con qué género te identificas?",
+          "description": "Por favor, comparte cómo te identificas",
+          "options": [
+            {
+              "id": "female",
+              "label": "Femenino",
+              "image": "👩"
+            },
+            { "id": "male", "label": "Masculino", "image": "👨" },
+            { "id": "other", "label": "Otro", "image": "😉" }
+          ]
+        }
+      }
+    },
+    {
+      "quizId": 3,
+      "type": "single-select",
+      "translations": {
+        "en": {
+          "title": "What is your age?",
+          "description": "",
+          "options": [
+            { "id": "18-29", "label": "18-29 years", "image": "" },
+            { "id": "30-39", "label": "30-39 years", "image": "" },
+            { "id": "40-49", "label": "40-49 years", "image": "" },
+            { "id": "50+", "label": "50+", "image": "" }
+          ]
+        },
+        "fr": {
+          "title": "Quel est votre âge ?",
+          "description": "",
+          "options": [
+            { "id": "18-29", "label": "18-29 ans", "image": "" },
+            { "id": "30-39", "label": "30-39 ans", "image": "" },
+            { "id": "40-49", "label": "40-49 ans", "image": "" },
+            { "id": "50+", "label": "50+", "image": "" }
+          ]
+        },
+        "de": {
+          "title": "Wie alt sind Sie?",
+          "description": "",
+          "options": [
+            { "id": "18-29", "label": "18-29 Jahre", "image": "" },
+            { "id": "30-39", "label": "30-39 Jahre", "image": "" },
+            { "id": "40-49", "label": "40-49 Jahre", "image": "" },
+            { "id": "50+", "label": "50+", "image": "" }
+          ]
+        },
+        "es": {
+          "title": "¿Cuál es tu edad?",
+          "description": "",
+          "options": [
+            { "id": "18-29", "label": "18-29 años", "image": "" },
+            { "id": "30-39", "label": "30-39 años", "image": "" },
+            { "id": "40-49", "label": "40-49 años", "image": "" },
+            { "id": "50+", "label": "50+", "image": "" }
+          ]
+        }
+      }
+    },
+    {
+      "quizId": 4,
+      "type": "multiple-select",
+      "translations": {
+        "en": {
+          "title": "What do you <span style='color: #e4229b;'>hate</span> the most in a book?",
+          "description": "",
+          "options": [
+            {
+              "id": "lack_of_logic",
+              "label": "Lack of logic",
+              "image": ""
+            },
+            {
+              "id": "slow_speed",
+              "label": "A slow speed",
+              "image": ""
+            },
+            {
+              "id": "lack_of_humor",
+              "label": "Lack of humor",
+              "image": ""
+            },
+            {
+              "id": "generic_ending",
+              "label": "Way too generic ending",
+              "image": ""
+            }
+          ]
+        },
+        "fr": {
+          "title": "Qu'est-ce que vous détestez le plus dans un livre ?",
+          "description": "",
+          "options": [
+            {
+              "id": "lack_of_logic",
+              "label": "Manque de logique",
+              "image": ""
+            },
+            {
+              "id": "slow_speed",
+              "label": "Un rythme trop lent",
+              "image": ""
+            },
+            {
+              "id": "lack_of_humor",
+              "label": "Manque d'humour",
+              "image": ""
+            },
+            {
+              "id": "generic_ending",
+              "label": "Une fin trop générique",
+              "image": ""
+            }
+          ]
+        },
+        "de": {
+          "title": "Was hassen Sie am meisten an einem Buch?",
+          "description": "",
+          "options": [
+            {
+              "id": "lack_of_logic",
+              "label": "Mangel an Logik",
+              "image": ""
+            },
+            {
+              "id": "slow_speed",
+              "label": "Zu langsames Tempo",
+              "image": ""
+            },
+            {
+              "id": "lack_of_humor",
+              "label": "Mangel an Humor",
+              "image": ""
+            },
+            {
+              "id": "generic_ending",
+              "label": "Ein viel zu allgemeines Ende",
+              "image": ""
+            }
+          ]
+        },
+        "es": {
+          "title": "¿Qué es lo que más odias en un libro?",
+          "description": "",
+          "options": [
+            {
+              "id": "lack_of_logic",
+              "label": "Falta de lógica",
+              "image": ""
+            },
+            {
+              "id": "slow_speed",
+              "label": "Un ritmo lento",
+              "image": ""
+            },
+            {
+              "id": "lack_of_humor",
+              "label": "Falta de humor",
+              "image": ""
+            },
+            {
+              "id": "generic_ending",
+              "label": "Un final demasiado genérico",
+              "image": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "quizId": 5,
+      "type": "bubble",
+      "translations": {
+        "en": {
+          "title": "What are your favorite topics?",
+          "description": "Choose up to 3 topics you like",
+          "options": [
+            {
+              "id": "werewolf",
+              "label": "Werewolf",
+              "image": "🐺"
+            },
+            {
+              "id": "romance",
+              "label": "Romance",
+              "image": "🥰"
+            },
+            {
+              "id": "action",
+              "label": "Action",
+              "image": "💃"
+            },
+            {
+              "id": "young_adult",
+              "label": "Young Adult",
+              "image": "💁‍♀️"
+            },
+            {
+              "id": "royal_obsession",
+              "label": "Royal Obsession",
+              "image": "👑"
+            },
+            {
+              "id": "bad_boy",
+              "label": "Bad Boy",
+              "image": "🤠"
+            },
+            {
+              "id": "billionaire",
+              "label": "Billionaire",
+              "image": "🤑"
+            }
+          ]
+        },
+        "fr": {
+          "title": "Quels sont vos sujets préférés ?",
+          "description": "Choisissez jusqu'à 3 sujets que vous aimez",
+          "options": [
+            {
+              "id": "werewolf",
+              "label": "Loup-garou",
+              "image": "🐺"
+            },
+            {
+              "id": "romance",
+              "label": "Romance",
+              "image": "🥰"
+            },
+            {
+              "id": "action",
+              "label": "Action",
+              "image": "💃"
+            },
+            {
+              "id": "young_adult",
+              "label": "Jeune adulte",
+              "image": "💁‍♀️"
+            },
+            {
+              "id": "royal_obsession",
+              "label": "Obsession royale",
+              "image": "👑"
+            },
+            {
+              "id": "bad_boy",
+              "label": "Mauvais garçon",
+              "image": "🤠"
+            },
+            {
+              "id": "billionaire",
+              "label": "Milliardaire",
+              "image": "🤑"
+            }
+          ]
+        },
+        "de": {
+          "title": "Was sind Ihre Lieblingsthemen?",
+          "description": "Wähle bis zu 3 Themen, die dir gefallen",
+          "options": [
+            {
+              "id": "werewolf",
+              "label": "Werwolf",
+              "image": "🐺"
+            },
+            {
+              "id": "romance",
+              "label": "Romantik",
+              "image": "🥰"
+            },
+            {
+              "id": "action",
+              "label": "Action",
+              "image": "💃"
+            },
+            {
+              "id": "young_adult",
+              "label": "Junge Erwachsene",
+              "image": "💁‍♀️"
+            },
+            {
+              "id": "royal_obsession",
+              "label": "Königliche Obsession",
+              "image": "👑"
+            },
+            {
+              "id": "bad_boy",
+              "label": "Bad Boy",
+              "image": "🤠"
+            },
+            {
+              "id": "billionaire",
+              "label": "Milliardär",
+              "image": "🤑"
+            }
+          ]
+        },
+        "es": {
+          "title": "¿Cuáles son tus temas favoritos?",
+          "description": "Elige hasta 3 temas que te gusten",
+          "options": [
+            {
+              "id": "werewolf",
+              "label": "Hombre lobo",
+              "image": "🐺"
+            },
+            {
+              "id": "romance",
+              "label": "Romance",
+              "image": "🥰"
+            },
+            {
+              "id": "action",
+              "label": "Acción",
+              "image": "💃"
+            },
+            {
+              "id": "young_adult",
+              "label": "Joven adulto",
+              "image": "💁‍♀️"
+            },
+            {
+              "id": "royal_obsession",
+              "label": "Obsesión real",
+              "image": "👑"
+            },
+            {
+              "id": "bad_boy",
+              "label": "Chico malo",
+              "image": "🤠"
+            },
+            {
+              "id": "billionaire",
+              "label": "Multimillonario",
+              "image": "🤑"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "quizCount": 5
+}
