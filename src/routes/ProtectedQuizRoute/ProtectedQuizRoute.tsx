@@ -8,8 +8,9 @@ import { getNextQuizId } from '../../utils/navigation';
 
 const ProtectedQuizRoute = () => {
   const { id } = useParams<{ id: string }>();
-  const quizId = Number(id);
   const { quizCount } = dataJSON;
+
+  const quizId = Number(id);
 
   const steps = useLocalStorage<QuizSteps>(QUIZ_STEPS, 'quiz').get();
   const answeredQuiz = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS, []).get();
