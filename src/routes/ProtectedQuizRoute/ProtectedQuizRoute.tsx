@@ -4,14 +4,15 @@ import { QUIZ_ANSWERS, QUIZ_STEPS } from '../../const';
 import dataJSON from '../../data/quizzes.json';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import { QuizAnswer, QuizSteps } from '../../types';
+import { getNextQuizId } from '../../utils/navigation';
 
 const ProtectedQuizRoute = () => {
   const { id } = useParams<{ id: string }>();
   const quizId = Number(id);
-  const { data } = dataJSON;
+  const { quizCount } = dataJSON;
 
-  const answersStorage = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS, []);
   const stepsStorage = useLocalStorage<QuizSteps>(QUIZ_STEPS, 'quiz');
+  const answersStorage = useLocalStorage<QuizAnswer[]>(QUIZ_ANSWERS, []);
 
   const answeredQuiz = answersStorage.get();
   const steps = stepsStorage.get();
@@ -25,16 +26,22 @@ const ProtectedQuizRoute = () => {
     );
   }
 
-  const isValidQuizId = data.some((item) => item.quizId === quizId);
+  const lastQuizId = answeredQuiz[answeredQuiz.length - 1]?.quizId;
 
-  const lastQuizId = answeredQuiz[answeredQuiz.length - 1]?.quizId || 0;
-  const isValidQuizStep = +quizId <= lastQuizId + 1;
-  const isAllowed = isValidQuizId && isValidQuizStep;
+  if (!lastQuizId && quizId !== 1) {
+    return (
+      <Navigate
+        to='quiz/1'
+        replace
+      />
+    );
+  }
 
-  if (!isAllowed) {
-    const isActualLastQuizId = lastQuizId === 1 || !isValidQuizId;
-    const currentId = isActualLastQuizId ? lastQuizId : lastQuizId + 1;
-    const navigationLink = `/quiz/${currentId}`;
+  const isValidQuizId = quizId <= quizCount && quizId !== 0;
+  const nextQuizId = getNextQuizId(answeredQuiz, quizId, quizCount);
+
+  if (!isValidQuizId || quizId > nextQuizId) {
+    const navigationLink = `/quiz/${nextQuizId}`;
 
     return (
       <Navigate
